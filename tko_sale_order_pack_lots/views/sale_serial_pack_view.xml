@@ -1,0 +1,45 @@
+<odoo>
+    <record model="ir.ui.view" id="sale_pack_serial_number_form">
+        <field name="name">serial.number.pack</field>
+        <field name="model">serial.number.pack</field>
+        <field name="arch" type="xml">
+            <form string="Pack">
+                <sheet>
+                    <group colspan="4">
+                        <field name="name"/>
+                        <field name="product_id" context="{'default_product_id': product_id}"/>
+                    </group>
+                    <group colspan="4" string="Lots">
+                        <field name="pack_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="lot_id"  required="1" domain="[('product_id', '=', parent.product_id),('serial_reserved','=',False)]" options="{'no_create': True}" groups="stock.group_production_lot"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sale_pack_serial_number_tree">
+        <field name="name">serial.number.pack</field>
+        <field name="model">serial.number.pack</field>
+        <field name="arch" type="xml">
+            <tree string="Pack">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sale_pack_serial_number_action" model="ir.actions.act_window">
+        <field name="name">Sale Serial Number Pack</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">serial.number.pack</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_sale_pack_serial_number_action" action="sale_pack_serial_number_action"
+              name="Sale Serial Number Pack" parent="stock.menu_warehouse_config"/>
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="pack_id" domain="[('product_id','=', -1)]" options="{'no_create': True}"
+                       context="{'default_product_id': product_id, 'quantity': product_uom_qty}" groups="stock.group_production_lot"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form/group/group/field[@name='product_id']" position="after">
+                <field name="pack_id" domain="[('product_id','=', -1)]" options="{'no_create': True}"
+                       context="{'default_product_id': product_id, 'quantity': product_uom_qty}" groups="stock.group_production_lot"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
