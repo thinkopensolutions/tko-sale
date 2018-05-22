@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_serial_number_pack_manager,serial_number_pack_manager,model_serial_number_pack,sales_team.group_sale_manager,1,1,1,1
+access_serial_number_pack_line_manager,serial_number_pack_line_manager,model_serial_number_pack_line,sales_team.group_sale_manager,1,1,1,1
+access_serial_number_pack_salesman,serial_number_pack_salesman,model_serial_number_pack,sales_team.group_sale_salesman,1,1,1,1
+access_serial_number_pack_line_salesman,serial_number_pack_line_salesman,model_serial_number_pack_line,sales_team.group_sale_salesman,1,1,1,1
+access_serial_number_pack_all_documents,serial_number_pack_salesman,model_serial_number_pack,sales_team.group_sale_salesman_all_leads,1,1,1,1
+access_serial_number_pack_line_all_documents,serial_number_pack_line_salesman,model_serial_number_pack_line,sales_team.group_sale_salesman_all_leads,1,1,1,1
