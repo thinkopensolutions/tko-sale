@@ -42,15 +42,12 @@ class SaleOrder(models.Model):
                         ## reverse list and pop the last element
                         available_lot_ids = [quant['lot_id'][0] for quant in quants][::-1]
                     # filter serial_reserved lots
-                    print("avaialbel................",available_lot_ids)
                     for lot_id in available_lot_ids:
                         lot = lot_obj.browse(lot_id)
                         if lot.serial_reserved == 'r' or lot.product_qty < 1:
                             available_lot_ids.remove(lot_id)
-                    print('final avaialable...........',available_lot_ids)
-                    print('final qty...........', line.product_uom_qty)
                     if len(available_lot_ids) < int(line.product_uom_qty):
-                        raise Warning("Not enough lots available for pack %s" %line.pack_id.name)
+                        raise Warning("Not enough lots available for pack %s" % line.pack_id.name)
                     # link lots to serial numbers
                     for i in range(0, int(line.product_uom_qty)):
                         self.env['serial.number.pack.line'].create({
@@ -65,7 +62,9 @@ class SaleOrder(models.Model):
             for order in self:
                 picking = order.picking_ids.filtered(
                     lambda x: x.state == 'confirmed' or (x.state in ['waiting', 'assigned'] and not x.printed))
-                picking.do_unreserve()
+                if not picking.picking_type_id.use_existing_lots or picking.picking_type_id.use_create_lots:
+                    picking.picking_type_id.use_existing_lots = False
+                    picking.picking_type_id.use_create_lots = False
                 picking.auto_assign_stock_moves()
         return res
 
