@@ -19,6 +19,7 @@
         'sale_stock',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'data/serial_pack_data.xml',
         'views/sale_serial_pack_view.xml',
         'views/sale_view.xml',
