@@ -11,6 +11,7 @@ class Picking(models.Model):
     # if the product is stockable and tracing is serial
     @api.multi
     def auto_assign_stock_moves(self):
+        self.do_unreserve()
         for line in self.move_lines:
             for lot in line.pack_id.pack_ids:
                 if line.product_id.type == 'product' and line.product_id.tracking == 'serial':
@@ -27,12 +28,7 @@ class Picking(models.Model):
                     # set lot reserved
                     lot.lot_id.reserve_lot()
         self.action_assign()
-        try:
-            # try to validate if serial numers are correct,
-            # should validate
-            self.button_validate()
-        except:
-            pass
+        self.button_validate()
         return True
 
 
@@ -50,7 +46,6 @@ class StockMove(models.Model):
             for line in record.move_line_ids:
                 line.lot_id.reserve_lot = True
         return result
-
 
 class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
