@@ -21,7 +21,7 @@ class SalePackSerialNumbersLine(models.Model):
     _name = 'serial.number.pack.line'
 
     pack_id = fields.Many2one('serial.number.pack', 'Pack')
-    lot_id = fields.Many2one('stock.production.lot', 'Pack')
+    lot_id = fields.Many2one('stock.production.lot', 'Lot')
 
     @api.multi
     def unlink(self):

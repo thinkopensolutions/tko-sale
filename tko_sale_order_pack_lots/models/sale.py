@@ -25,7 +25,7 @@ class SaleOrder(models.Model):
         for record in self:
             for line in record.order_line:
                 # break for loop if qty and serial numbers are matched
-                if int(line.product_uom_qty) == len(line.pack_id.pack_ids) or not line.pack_id:
+                if int(line.product_uom_qty) != len(line.pack_id.pack_ids) or not line.pack_id:
                     continue
                 assign = True
                 ### unlink lots before linking again
