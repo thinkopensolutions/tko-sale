@@ -47,7 +47,7 @@ class SaleOrder(models.Model):
                         if lot.serial_reserved == 'r' or lot.product_qty < 1:
                             available_lot_ids.remove(lot_id)
                     if len(available_lot_ids) < int(line.product_uom_qty):
-                        raise Warning("Not enough lots available for pack %s" % line.pack_id.name)
+                        raise Warning (_("Not enough lots available for pack %s") % line.pack_id.name)
                     # link lots to serial numbers
                     for i in range(0, int(line.product_uom_qty)):
                         self.env['serial.number.pack.line'].create({
