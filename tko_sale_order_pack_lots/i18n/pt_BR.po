@@ -1,0 +1,189 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* tko_sale_order_pack_lots
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-27 15:32+0000\n"
+"PO-Revision-Date: 2018-08-27 15:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_create_uid
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_create_date
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_display_name
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: tko_sale_order_pack_lots
+#: code:addons/tko_sale_order_pack_lots/models/sale_serial_pack.py:17
+#, python-format
+msgid "Duplicate serial numbers selected in pack %s"
+msgstr "Duplicate serial numbers selected in pack %s"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_id
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tko_sale_order_pack_lots
+#: code:addons/tko_sale_order_pack_lots/models/stock.py:110
+#, python-format
+msgid "It is not possible to reserve more products of %s than you have in stock."
+msgstr "It is not possible to reserve more products of %s than you have in stock."
+
+#. module: tko_sale_order_pack_lots
+#: code:addons/tko_sale_order_pack_lots/models/stock.py:115
+#, python-format
+msgid "It is not possible to unreserve more products of %s than you have in stock."
+msgstr "It is not possible to unreserve more products of %s than you have in stock."
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack___last_update
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_write_uid
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_write_date
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_write_date
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_lot_id
+msgid "Lot"
+msgstr "Lote"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lote/Serie"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_pack_ids
+#: model:ir.ui.view,arch_db:tko_sale_order_pack_lots.sale_pack_serial_number_form
+msgid "Lots"
+msgstr "Lots"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_name
+msgid "Name"
+msgstr "Nome"
+
+#. module: tko_sale_order_pack_lots
+#: code:addons/tko_sale_order_pack_lots/models/sale_serial_pack.py:9
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: tko_sale_order_pack_lots
+#: code:addons/tko_sale_order_pack_lots/models/sale.py:50
+#, python-format
+msgid "Not enough lots available for pack"
+msgstr "Não há seriais disponíveis para a embalagem"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_sale_order_line_pack_id
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_line_pack_id
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_stock_move_pack_id
+#: model:ir.ui.view,arch_db:tko_sale_order_pack_lots.sale_pack_serial_number_form
+#: model:ir.ui.view,arch_db:tko_sale_order_pack_lots.sale_pack_serial_number_tree
+msgid "Pack"
+msgstr "Embalagem"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_stock_move_line
+msgid "Packing Operation"
+msgstr "Operação de Embalagem"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_procurement_rule
+msgid "Procurement Rule"
+msgstr "Regras de Compras"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_serial_number_pack_product_id
+msgid "Product"
+msgstr "Produto"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_sale_order
+msgid "Quotation"
+msgstr "Cotação"
+
+#. module: tko_sale_order_pack_lots
+#: selection:stock.production.lot,serial_reserved:0
+msgid "Reserved"
+msgstr "Reserved"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model.fields,field_description:tko_sale_order_pack_lots.field_stock_production_lot_serial_reserved
+msgid "Reserved?"
+msgstr "Reserved?"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.actions.act_window,name:tko_sale_order_pack_lots.sale_pack_serial_number_action
+#: model:ir.ui.menu,name:tko_sale_order_pack_lots.menu_sale_pack_serial_number_action
+msgid "Sale Serial Number Pack"
+msgstr "Sale Serial Number Pack"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Linha do Pedido de Vendas"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_stock_move
+msgid "Stock Move"
+msgstr "Movimento de Estoque"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: tko_sale_order_pack_lots
+#: selection:stock.production.lot,serial_reserved:0
+msgid "Un Reserved"
+msgstr "Un Reserved"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_serial_number_pack
+msgid "serial.number.pack"
+msgstr "serial.number.pack"
+
+#. module: tko_sale_order_pack_lots
+#: model:ir.model,name:tko_sale_order_pack_lots.model_serial_number_pack_line
+msgid "serial.number.pack.line"
+msgstr "serial.number.pack.line"
